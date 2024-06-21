@@ -1,3 +1,65 @@
 body{
     background: url(../img/bricks\ wall\ non-free.jpeg);
 }
+
+/* Estilos del div contenedor */
+#container {
+    width: 300px;
+    height: 300px; /* Ajustado para dar espacio suficiente al contenido */
+    background-color: black;
+    border-radius: 50px; /* Esquinas redondeadas */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para la línea giratoria 1 */
+#line {
+    position: absolute;
+    width: calc(300px + 80px); /* Ancho más el doble del radio para asegurar que cubra todo el contenedor */
+    height: 6px; /* Grosor de la línea */
+    top: 50%; /* Posición central vertical */
+    left: 50%; /* Posición central horizontal */
+    transform: translate(-50%, -50%);
+    background: #FF1493; /* Color rosa neon */
+    animation: rotateLine 5s linear infinite;
+    border-radius: 20px; /* Esquinas redondeadas */
+}
+
+/* Estilos para la línea giratoria 2 */
+#line2 {
+    position: absolute;
+    width: 6px; /* Grosor de la línea */
+    height: calc(300px + 80px); /* Alto más el doble del radio para asegurar que cubra todo el contenedor */
+    top: 50%; /* Posición central vertical */
+    left: 50%; /* Posición central horizontal */
+    transform: translate(-50%, -50%) rotate(90deg); /* Rotación para que quede vertical */
+    background: #00FFFF; /* Color azul neon */
+    animation: rotateLine 5s linear infinite;
+    border-radius: 20px; /* Esquinas redondeadas */
+}
+
+/* Animación para la línea giratoria 1 */
+@keyframes rotateLine {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Estilos del segundo div */
+#cita {
+    width: 90%; /* Ajustado para mantener margen alrededor */
+    height: 90%; /* Ajustado para mantener margen alrededor */
+    background-color: white;
+    z-index: 1; /* Coloca el segundo div delante de las líneas giratorias */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 50px; /* Esquinas redondeadas */
+    padding: 5px;
+}
