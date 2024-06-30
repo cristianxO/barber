@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <form>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="name">
+        <label for="apellido">Apellido</label>
+        <input type="text" id="lastname">
+     </form>
+     <button onclick="create()">ENVIAR</button>
+     <button onclick="read()">LEER</button>
+    </body>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+<script src="../config/firebaseconect.js"></script>
+<script src="../config/fireCRUD.js"></script>
+</html>
